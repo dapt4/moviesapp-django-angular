@@ -1,0 +1,1 @@
+-arreglar el tema del cors para el frontend en django

@@ -1,0 +1,83 @@
+### Studio
+# get studios
+GET 'http://localhost:8000/estudio'
+
+# create a studio
+Content-Type: application/json
+POST 'http://localhost:8000/estudio' << raw
+{
+  "nombre": "a Studio",
+  "direccion": "Santa Monica, California, USA"
+}
+raw
+
+# get a studio
+GET 'http://localhost:8000/estudio/8'
+
+# edit studio
+PUT 'http://localhost:8000/estudio/8' << raw
+{
+  "nombre":"nombre",
+  "direccion":"direccion"
+}
+raw
+
+# delete a studio
+DELETE 'http://localhost:8000/estudio/8'
+
+### Movie
+# get movies
+GET 'http://localhost:8000/pelicula'
+
+# create a studio
+Content-Type: application/json
+POST 'http://localhost:8000/pelicula' << raw
+{
+  "titulo": "pelicula",
+  "fecha": 2023,
+  "estudio": 3
+}
+raw
+
+# get a studio
+GET 'http://localhost:8000/pelicula/9'
+
+# edit studio
+PUT 'http://localhost:8000/pelicula/9' << raw
+{
+  "titulo": "pelicula2",
+  "fecha": 2022,
+  "estudio": 7
+}
+raw
+
+# delete a studio
+DELETE 'http://localhost:8000/pelicula/9'
+
+### Actor
+# get movies
+GET 'http://localhost:8000/actor'
+
+# create a studio
+Content-Type: application/json
+POST 'http://localhost:8000/actor' << raw
+{
+  "nombre": "diego perozo",
+  "pelicula": 8
+}
+raw
+
+# get a studio
+GET 'http://localhost:8000/actor/6'
+
+# edit studio
+PUT 'http://localhost:8000/actor/6' << raw
+{
+  "nombre": "hugo perozo",
+  "pelicula": 3
+}
+raw
+
+# delete a studio
+DELETE 'http://localhost:8000/actor/6'
+

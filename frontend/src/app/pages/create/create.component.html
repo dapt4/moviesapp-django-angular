@@ -1,0 +1,22 @@
+<mat-card class="cardform">
+  <mat-card-header>
+    <mat-card-title>Movie</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-form-field class="cardform_field">
+      <mat-label>Title</mat-label>
+      <input matInput type="text" [(ngModel)]="formData.titulo"/>
+    </mat-form-field>
+    <mat-form-field class="cardform_field">
+      <mat-label>Year</mat-label>
+      <input matInput type="text" [(ngModel)]="formData.fecha"/>
+    </mat-form-field>
+    <mat-form-field class="cardform_field">
+      <mat-label>Study</mat-label>
+      <mat-select [(ngModel)]="formData.estudio">
+        <mat-option *ngFor="let study of studies" [value]="study.id">{{study.nombre}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <button mat-raised-button color="primary" (click)="submitForm()">Send</button>
+  </mat-card-content>
+</mat-card>

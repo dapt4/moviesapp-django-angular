@@ -1,0 +1,13 @@
+<mat-card class="cardform">
+  <mat-card-content>
+    <mat-form-field class="cardform_field" >
+      <mat-label>Name</mat-label>
+      <input matInput [(ngModel)]="data.nombre"/> 
+    </mat-form-field>
+    <mat-form-field class="cardform_field">
+      <mat-label>Address</mat-label>
+      <input [(ngModel)]="data.direccion" matInput/>
+    </mat-form-field>
+    <button mat-raised-button color="primary" (click)="saveData()">Send</button>
+  </mat-card-content>
+</mat-card>

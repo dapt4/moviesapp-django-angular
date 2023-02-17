@@ -1,0 +1,18 @@
+<mat-card class="cardform">
+  <mat-card-content>
+    <mat-form-field class="cardform_field" >
+      <mat-label>Name</mat-label>
+      <input matInput [(ngModel)]="actorData.nombre"/> 
+    </mat-form-field>
+    <mat-form-field class="cardform_field">
+      <mat-label>Pelicula</mat-label>
+      <!-- <input [(ngModel)]="actorData.pelicula" matInput/> -->
+      <mat-select [(ngModel)]="actorData.pelicula">
+        <mat-option *ngFor="let movie of movies" [value]="movie.id">
+          {{movie.titulo}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <button mat-raised-button color="primary" (click)="saveData()">Send</button>
+  </mat-card-content>
+</mat-card>

@@ -1,0 +1,183 @@
+let SessionLoad = 1
+let s:so_save = &g:so | let s:siso_save = &g:siso | setg so=0 siso=0 | setl so=-1 siso=-1
+let v:this_session=expand("<sfile>:p")
+silent only
+silent tabonly
+cd ~/Documentos/moviesapp-django-angular/frontend
+if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
+  let s:wipebuf = bufnr('%')
+endif
+set shortmess=aoO
+argglobal
+%argdel
+set stal=2
+tabnew
+tabnew
+tabnew
+tabnew
+tabnew
+tabrewind
+edit src/app/app.module.ts
+argglobal
+balt src/app/pages/actor/actorTypes.ts
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+silent! normal! zE
+let &fdl = &fdl
+let s:l = 26 - ((18 * winheight(0) + 19) / 38)
+if s:l < 1 | let s:l = 1 | endif
+keepjumps exe s:l
+normal! zt
+keepjumps 26
+normal! 04|
+tabnext
+edit __roast_pretty__
+argglobal
+balt __roast_headers__
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+silent! normal! zE
+let &fdl = &fdl
+let s:l = 1 - ((0 * winheight(0) + 19) / 38)
+if s:l < 1 | let s:l = 1 | endif
+keepjumps exe s:l
+normal! zt
+keepjumps 1
+normal! 0
+tabnext
+edit src/app/pages/actor/actor.component.html
+argglobal
+balt src/app/pages/actor/actor.component.ts
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+silent! normal! zE
+let &fdl = &fdl
+let s:l = 18 - ((17 * winheight(0) + 19) / 38)
+if s:l < 1 | let s:l = 1 | endif
+keepjumps exe s:l
+normal! zt
+keepjumps 18
+normal! 011|
+tabnext
+edit src/app/pages/actor/actor.component.ts
+argglobal
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+silent! normal! zE
+let &fdl = &fdl
+let s:l = 58 - ((37 * winheight(0) + 19) / 38)
+if s:l < 1 | let s:l = 1 | endif
+keepjumps exe s:l
+normal! zt
+keepjumps 58
+normal! 0
+tabnext
+edit src/app/pages/actor/actor.service.ts
+argglobal
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+silent! normal! zE
+let &fdl = &fdl
+let s:l = 20 - ((19 * winheight(0) + 19) / 38)
+if s:l < 1 | let s:l = 1 | endif
+keepjumps exe s:l
+normal! zt
+keepjumps 20
+normal! 031|
+tabnext
+edit src/app/pages/actor/actorTypes.ts
+argglobal
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+silent! normal! zE
+let &fdl = &fdl
+let s:l = 6 - ((5 * winheight(0) + 19) / 38)
+if s:l < 1 | let s:l = 1 | endif
+keepjumps exe s:l
+normal! zt
+keepjumps 6
+normal! 025|
+tabnext 3
+set stal=1
+badd +13 src/app/app-routing.module.ts
+badd +6 src/app/app.component.html
+badd +50 src/app/pages/list/list.component.html
+badd +13 src/app/pages/studio/studio.component.html
+badd +41 src/app/pages/studio/studio.component.ts
+badd +25 src/app/pages/studio/get-studio-data.service.ts
+badd +26 src/app/app.module.ts
+badd +1 __roast_headers__
+badd +0 src/assets/host.ts
+badd +1 src/app/pages/create/create.component.scss
+badd +22 src/app/pages/create/create.component.html
+badd +1 src/app/pages/create/create.component.ts
+badd +38 src/app/pages/create/createedit.service.ts
+badd +1 src/app/pages/create/types.ts
+badd +1 src/app/pages/list/types.ts
+badd +9 src/styles.scss
+badd +24 src/app/pages/list/list.component.ts
+badd +25 src/app/pages/list/getMovies.service.ts
+badd +1 src/assets/.gitkeep
+badd +3 src/app/pages/list/getMovies.service.spec.ts
+badd +10 src/app/app.component.ts
+badd +1 src/notes.txt
+badd +4 src/main.ts
+badd +5 src/app/pages/studio/types.ts
+badd +1 roast.roast
+badd +1 __roast_pretty__
+badd +6 src/app/pages/studio/studio.component.scss
+badd +6 src/app/pages/actor/actorTypes.ts
+badd +48 src/app/pages/actor/actor.component.ts
+badd +5 src/app/pages/actor/actor.service.ts
+badd +10 src/app/pages/actor/actor.component.html
+if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
+  silent exe 'bwipe ' . s:wipebuf
+endif
+unlet! s:wipebuf
+set winheight=1 winwidth=20 shortmess=filnxtToOF
+let s:sx = expand("<sfile>:p:r")."x.vim"
+if filereadable(s:sx)
+  exe "source " . fnameescape(s:sx)
+endif
+let &g:so = s:so_save | let &g:siso = s:siso_save
+set hlsearch
+nohlsearch
+doautoall SessionLoadPost
+unlet SessionLoad
+" vim: set ft=vim :

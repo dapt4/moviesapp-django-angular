@@ -1,0 +1,50 @@
+<section>
+  <article>
+    <h1>Studies</h1>
+    <div class="card_list">
+      <mat-card *ngFor="let study of studies">
+        <mat-card-header>
+          <mat-card-title>{{ study.id }} {{ study.nombre }}</mat-card-title>
+          <mat-card-subtitle>{{ study.direccion }}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-actions>
+          <button mat-button [routerLink]="['/editStudio/', study.id]">edit</button>
+          <button mat-button (click)="deleteStudy(study.id)">delete</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </article>
+  <article>
+    <h1>Movies</h1>
+    <div class="card_list">
+      <mat-card *ngFor="let movie of movies">
+        <mat-card-header>
+          <mat-card-title>{{ movie.id }} {{ movie.titulo }}</mat-card-title>
+          <mat-card-subtitle>{{ movie.fecha }}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <p>{{ movie.estudio }}</p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button [routerLink]="['/editmovie/', movie.id]">edit</button>
+          <button mat-button (click)="deleteMovie(movie.id)">delete</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </article>
+  <article>
+    <h1>Actores</h1>
+    <div class="card_list">
+      <mat-card *ngFor="let actor of actors">
+        <mat-card-header>
+          <mat-card-title>{{ actor.id }} {{ actor.nombre }}</mat-card-title>
+          <mat-card-subtitle>{{ actor.pelicula }}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-actions>
+          <button mat-button [routerLink]="['/editActor/', actor.id]">edit</button>
+          <button mat-button (click)="deleteActor(actor.id)">delete</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </article>
+</section>
