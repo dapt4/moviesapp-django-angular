@@ -1,6 +1,6 @@
 # moviesapp-django-angular
 
-
+![image](https://user-images.githubusercontent.com/67972962/219655304-65a56a41-05e6-460a-91f6-1e12d9735e09.png)
 
 first create your virtualenv
 
